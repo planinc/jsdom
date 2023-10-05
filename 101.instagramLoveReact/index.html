@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #instagramPost {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    .love {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 150px;
+        width: 150px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="instagramPost">
+        <img src="ppp.jpg" alt="" class="girl" style="height: 600px; width: 400px;">
+        <img src="heart-431.svg" alt="" class="love">
+    </div>
+    <script>
+        let main = document.querySelector("#instagramPost");
+        let girlImg = document.querySelector(".girl");
+        let heart = document.querySelector(".love");
+        main.addEventListener("dblclick", function myFunction() {
+            heart.style.transition = "1s"
+            heart.style.transitionTimingFunction = "0.5s";
+            heart.style.display = "block";
+            setTimeout(function timeOut() {
+                heart.style.display = "none";
+                heart.style.transition = "1s"
+                heart.style.transitionTimingFunction = "0.5s";
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cursor</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #main-container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            background-color: #000;
+            color: #fff;
+            cursor: default;
+        }
+
+        h1 {
+            font-size: 15vw;
+        }
+
+        .customCursor {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: #fff;
+            mix-blend-mode: difference;
+            transition: all linear 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+        <h1>
+            Hello World!
+        </h1>
+        <div class="customCursor">
+
+        </div>
+    </div>
+    <script>
+        let mainContainer = document.querySelector('#main-container');
+        let crsr = document.querySelector('.customCursor');
+
+        mainContainer.addEventListener('mousemove', function (dets) {
+            crsr.style.top = dets.y + 'px';
+            crsr.style.left = dets.x + 'px';
+        })
+    </script>
+</body>
+
+</html>

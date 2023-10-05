@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="ul">
+        <li>LOL 1</li>
+        <li>LOL 2</li>
+        <li>LOL 3</li>
+        <li>LOL 4</li>
+        <li>LOL 5</li>
+    </ul>
+    <script>
+        let ul = document.querySelector("#ul");
+        let li = document.createElement("li");
+        let h1 = document.createElement("h1");
+        ul.append(li);
+        ul.append(h1);
+        h1.innerHTML = 'HELLO, FUCKING DOM ELEMENT';
+    </script>
+</body>
+
+</html>
